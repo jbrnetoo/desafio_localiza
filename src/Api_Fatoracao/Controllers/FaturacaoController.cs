@@ -4,6 +4,7 @@ using System.Net;
 
 namespace Api_Fatoracao.Controllers
 {
+    [ApiVersion("1.0")]
     [Route("[controller]")]
     [ApiController]
     public class FaturacaoController : ControllerBase
