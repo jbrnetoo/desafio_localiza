@@ -1,5 +1,6 @@
 ﻿using Api_Fatoracao.Utils;
 using Microsoft.AspNetCore.Mvc;
+using KissLog;
 using System;
 using System.Net;
 
@@ -10,6 +11,12 @@ namespace Api_Fatoracao.Controllers
     [ApiController]
     public class FaturacaoController : ControllerBase
     {
+        private readonly ILogger _logger;
+
+        public FaturacaoController(ILogger logger)
+        {
+            _logger = logger;
+        }
 
         #region Decompor Números
         /// <summary>
@@ -30,6 +37,7 @@ namespace Api_Fatoracao.Controllers
             }
             catch (Exception ex)
             {
+                _logger.Error(ex.Message);
                 return StatusCode((int)HttpStatusCode.InternalServerError);
             }
         }
