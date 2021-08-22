@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Api_Fatoracao_UnitTests": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
