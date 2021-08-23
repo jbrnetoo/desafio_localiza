@@ -1,6 +1,6 @@
 ﻿using Api_Fatoracao.Utils;
-using Microsoft.AspNetCore.Mvc;
 using KissLog;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Net;
 
