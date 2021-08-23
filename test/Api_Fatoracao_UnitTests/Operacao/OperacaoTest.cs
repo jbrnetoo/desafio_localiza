@@ -16,6 +16,7 @@ namespace Api_Fatoracao_UnitTests.Operacao
             var texto = Operacoes.MontarTexto(numero);
 
             //Assert
+            Assert.NotNull(texto);
             Assert.Contains("Número de entrada: 68", texto.ToString());
             Assert.Contains("Números divisores: 1 2 4 17 34 68", texto.ToString());
             Assert.Contains("Divisores primos: 1 2 17", texto.ToString());
@@ -31,6 +32,7 @@ namespace Api_Fatoracao_UnitTests.Operacao
             var divisores = Operacoes.ObterDivisores(numero);
 
             //Assert
+            Assert.NotEmpty(divisores);
             Assert.Equal(divisores, new List<int>() { 1, 2, 4, 17, 34, 68 });
         }
 
@@ -44,6 +46,7 @@ namespace Api_Fatoracao_UnitTests.Operacao
             var primos = Operacoes.ObterPrimosDeEspecificoNumero(numero);
 
             //Assert
+            Assert.NotEmpty(primos);
             Assert.Equal(primos, new List<int>() { 1, 2, 17 });
         }
     }
